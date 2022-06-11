@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function convert(degree)
+        {
+               var Temp,temp;
+               if(degree == "c")
+               {
+                Temp=document.getElementById("c").value*9/5+32;
+                document.getElementById("f").value=Temp;
+               }
+               else
+               {
+                temp=(document.getElementById("f").value-32)*5/9;
+                document.getElementById("c").value=temp;
+               }
+        }
+    </script>
+</head>
+<body><form>
+    <div style="background-color:whitesmoke;color:red;"><h1>Temperature converter</h1></div>
+    Temperature in degree celsius:  <input type="number" placeholder="Temperature in degree celsius" id="c" onkeyup="convert('c')">&emsp;C
+    <br><br>
+    Temperature in Fahrenheit :&emsp; <input type="number" placeholder="Temperature in Fahrenheit" id="f" onkeyup="convert('f')">&emsp;F
+    <br><br>
+    <input type="reset" value="Reset" ><br><br></form>
+</body>
+</html>
